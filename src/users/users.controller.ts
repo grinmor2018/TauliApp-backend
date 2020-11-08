@@ -24,8 +24,8 @@ export class UsersController {
     @Post('register')
     @ApiCreatedResponse({ type: UserDTO })
     @ApiBadRequestResponse({ type: ApiException })
-    @Roles(UserRole.Admin)
-    @UseGuards(AuthGuard('jwt'), RolesGuard)
+    //@Roles(UserRole.Admin)
+    //@UseGuards(AuthGuard('jwt'), RolesGuard)
     @ApiOperation({ summary: "Registre d'usuari", description: "Crea un usuari nou a l'aplicació" })
     async register(@Body() dto: RegisterDTO): Promise<UserDTO> {
         const { nif, password } = dto;

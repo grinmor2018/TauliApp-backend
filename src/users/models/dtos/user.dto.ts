@@ -7,9 +7,17 @@ import { User } from "../user.schema";
 @Exclude()
 export class UserDTO extends BaseModelDTO {
     
-    @ApiPropertyOptional({ example: 'usuari.test' })
+    @ApiPropertyOptional({ example: 'Benito' })
     @Expose()
-    readonly username: string;
+    readonly nom: string;
+
+    @ApiPropertyOptional({ example: 'Camela' })
+    @Expose()
+    readonly cognom1: string;
+
+    @ApiPropertyOptional({ example: 'Otravez' })
+    @Expose()
+    readonly cognom2: string;
 
     @ApiPropertyOptional({ enum: UserRole, default: 'User' })
     @Expose()
@@ -27,7 +35,7 @@ export class UserDTO extends BaseModelDTO {
     @Expose()
     mobilePhone: string;
 
-    @ApiPropertyOptional({ example: 'usuari.test@gmail.com' })
+    @ApiPropertyOptional({ example: 'benitocamelaotravez@gmail.com' })
     @Expose()
     email: string;
 

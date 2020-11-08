@@ -5,10 +5,20 @@ import { IsEmail, IsString, IsDateString, IsNotEmpty, IsOptional } from 'class-v
 
 export class RegisterDTO extends LoginDTO {
 
-    @ApiProperty({ example: 'usuari.test' })
+    @ApiProperty({ example: 'Alba' })
     @IsString()
     @IsNotEmpty()
-    readonly username: string;
+    readonly nom: string;
+
+    @ApiProperty({ example: 'Ñoguar' })
+    @IsString()
+    @IsNotEmpty()
+    readonly cognom1: string;
+
+    @ApiProperty({ example: 'Ras' })
+    @IsString()
+    @IsNotEmpty()
+    readonly cognom2: string;
 
     @ApiProperty({ example: 'ARPO123456780' })
     @IsString()
@@ -20,7 +30,7 @@ export class RegisterDTO extends LoginDTO {
     @IsNotEmpty()
     readonly mobilePhone: string;
 
-    @ApiPropertyOptional({ example: 'usuari.test@gmail.com' })
+    @ApiPropertyOptional({ example: 'albañoguarras@gmail.com' })
     @IsEmail()
     @IsString()
     @IsOptional()

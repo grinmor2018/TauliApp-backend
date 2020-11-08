@@ -6,12 +6,25 @@ import { Exclude } from 'class-transformer';
 @Schema(schemaOptions)
 export class User extends BaseModel<User> {
     @Prop({
-        required: [true, 'Username is required'],
-        unique: true,
+        required: true,
         trim: true,
         lowercase: true
     })
-    username: string;
+    nom: string;
+
+    @Prop({
+        required: true,
+        trim: true,
+        lowercase: true
+    })
+    cognom1: string;
+
+    @Prop({
+        required: true,
+        trim: true,
+        lowercase: true
+    })
+    cognom2: string;
 
     @Prop({
         required: true
