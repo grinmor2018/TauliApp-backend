@@ -1,6 +1,0 @@
-{
-    "JWT_KEY": "TauliSecret!2020",
-    "MONGO_URI": "mongodb://localhost:27017/tauli-app",
-    "PORT": "3000",
-    "HOST": "localhost"
-}
